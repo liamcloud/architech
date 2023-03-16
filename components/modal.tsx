@@ -2,9 +2,14 @@ import { useState } from "react";
 import SquigglyLines from "../components/SquigglyLines";
 import Image from "next/image";
 import Link from "next/link";
-import { AiOutlineCheckCircle } from 'react-icons/ai';
+import { AiOutlineCheckCircle } from "react-icons/ai";
 
-const Modal = ({ open, onClose }) => {
+interface ModalProps {
+  open: boolean;
+  onClose: () => void;
+}
+
+const Modal = ({ open, onClose }: ModalProps) => {
   if (!open) {
     return null;
   }
@@ -43,16 +48,39 @@ const Modal = ({ open, onClose }) => {
               </p>
             </div>
             <div className="h2">
-            <Link href='/'><h2 className="sub">Subscribe</h2></Link>
+              <Link href="/">
+                <h2 className="sub">Subscribe</h2>
+              </Link>
             </div>
             <ul className="list">
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Unlimited renders</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Faster & higher quality renders</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Keep originals & renders private</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>30+ more styles and room types</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Newest AI models w/ CLIP-guidance for less artefacts</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Premium support & request features</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Commercial usage license for 1 person</li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Unlimited renders
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Faster & higher quality renders
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Keep originals & renders private
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                30+ more styles and room types
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Newest AI models w/ CLIP-guidance for less artefacts
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Premium support & request features
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Commercial usage license for 1 person
+              </li>
             </ul>
           </div>
           <div>
@@ -76,17 +104,40 @@ const Modal = ({ open, onClose }) => {
             </div>
 
             <div className="h2">
-            <Link href='/'><h2 className="sub">Subscribe</h2></Link>
+              <Link href="/">
+                <h2 className="sub">Subscribe</h2>
+              </Link>
             </div>
-  
+
             <ul className="list">
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Unlimited renders</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Faster & higher quality renders</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Keep originals & renders private</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>30+ more styles and room types</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Newest AI models w/ CLIP-guidance for less artefacts</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Premium support & request features</li>
-                <li className="test flex"><AiOutlineCheckCircle className="gello"/>Commercial usage license for 1 person</li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Unlimited renders
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Faster & higher quality renders
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Keep originals & renders private
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                30+ more styles and room types
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Newest AI models w/ CLIP-guidance for less artefacts
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Premium support & request features
+              </li>
+              <li className="test flex">
+                <AiOutlineCheckCircle className="gello" />
+                Commercial usage license for 1 person
+              </li>
             </ul>
           </div>
         </div>
