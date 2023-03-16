@@ -48,7 +48,10 @@ const Modal = ({ open, onClose }: ModalProps) => {
               </p>
             </div>
             <div className="h2">
-              <Link href="/">
+              <Link
+                href="https://buy.stripe.com/00g9Czcci34tdBS288"
+                target="_blank"
+              >
                 <h2 className="sub">Subscribe</h2>
               </Link>
             </div>
@@ -104,7 +107,10 @@ const Modal = ({ open, onClose }: ModalProps) => {
             </div>
 
             <div className="h2">
-              <Link href="/">
+              <Link
+                href="https://buy.stripe.com/bIY8yv6RY34tfK0fYZ"
+                target="_blank"
+              >
                 <h2 className="sub">Subscribe</h2>
               </Link>
             </div>
