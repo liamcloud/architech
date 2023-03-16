@@ -8,6 +8,8 @@ import SquigglyLines from "../components/SquigglyLines";
 import { Testimonials } from "../components/Testimonials";
 import { GiWideArrowDunk } from 'react-icons/gi';
 import CountUp from "react-countup";
+import Modal from "../components/modal"
+import { useState } from "react";
 
 const Home: NextPage = () => {
   return (
@@ -21,12 +23,12 @@ const Home: NextPage = () => {
         <p
           className="border border-gray-700 rounded-lg py-2 px-4 text-gray-400 text-sm mb-5 transition duration-300 ease-in-out hover:text-gray-300"
         >
-          Already{" "}<CountUp start={20000} end={24902} duration={1} separator="," /> rooms generated, and counting!
+          Already{" "}<span className="span"><CountUp start={20000} end={24902} duration={2} separator=","/></span> rooms generated, and counting!
         </p>
-        <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
+        <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-white-300 sm:text-7xl">
           Generate your dream room{" "}
-          <GiWideArrowDunk className="mx-auto mt-10 mb-7"/>
-          <span className="relative whitespace-nowrap text-white-600">
+          <GiWideArrowDunk className="mx-auto mt-10 mb-7 text-gray-300"/>
+          <span className="relative whitespace-nowrap">
             <SquigglyLines />
             <span className="relative">using AI</span>
           </span>
@@ -36,7 +38,7 @@ const Home: NextPage = () => {
           themes.
         </h2>
         <Link
-          className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
+          className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 transition myClass"
           href="/dream"
         >
           Generate your dream room
@@ -48,7 +50,7 @@ const Home: NextPage = () => {
                 <h3 className="mb-1 font-medium text-lg">Original Room</h3>
                 <Image
                   alt="Original photo of a room with roomGPT.io"
-                  src="/original-pic.jpg"
+                  src="/livingroom.jpeg"
                   className="w-full object-cover h-96 rounded-2xl"
                   width={400}
                   height={400}
@@ -60,7 +62,7 @@ const Home: NextPage = () => {
                   alt="Generated photo of a room with roomGPT.io"
                   width={400}
                   height={400}
-                  src="/generated-pic-2.jpg"
+                  src="/livingroombis.png"
                   className="w-full object-cover h-96 rounded-2xl sm:mt-0 mt-2"
                 />
               </div>

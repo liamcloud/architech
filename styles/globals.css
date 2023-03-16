@@ -6,7 +6,7 @@
   .background-gradient::before {
     background: radial-gradient(
       20% 50% at 50% 50%,
-      rgba(71, 127, 247, 0.376) 0%,
+      rgba(230,0,122,.5) 0%,
       rgba(37, 38, 44, 0) 100%
     );
     z-index: -10;
@@ -16,4 +16,126 @@
     transform: scale(1);
     pointer-events: none;
   }
+}
+.myClass{
+  background-color: #e6007a;
+}
+
+.myClass:hover{
+  opacity: 0.7;
+}
+
+.myClass2{
+  fill:#e6007a;
+}
+
+.span{
+  color:white;
+}
+
+::-moz-selection { /* Code for Firefox */
+  color: white;;
+  background: #e6007a;
+}
+
+::selection {
+  color: white;;
+  background: #e6007a;;
+}
+
+.pinkText{
+  color:#e6007a;
+}
+
+.btn--upload{
+  background-color:#e6007a;
+}
+
+.element{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  padding: 12 24px;
+  background:black;
+  border:0.2px solid white;
+  color:white;
+  padding:20px;
+  width: 70%;
+  box-shadow: 0px 8px 1200px 10px #e6007a;
+ 
+}
+
+.modal{
+  background-color: black;
+  position: fixed;
+  width:100vw;
+  height:100vh;
+  opacity: 0.9;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  padding: 12 24px;
+}
+
+.pay{
+  justify-content: space-around;
+}
+
+.color{
+  color:#e6007a;
+}
+
+.price{
+  color:#e6007a;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-right:1rem;
+}
+
+.logo{
+  margin:0 auto;
+  margin-top:1rem;
+}
+
+.al{
+  align-items: center;
+  justify-content:center;
+  padding-top:2rem;
+  padding-bottom:2rem;
+}
+
+.gray{
+  color:gray;
+}
+
+.sub{
+  font-weight: bold;
+  font-size: 1.2rem;
+  background-color: #e6007a;
+  padding:0.7rem;
+  text-align: center;
+}
+.test{
+  align-items: center;
+}
+
+.gello{
+  margin-right:0.5rem;
+}
+
+h1{
+  text-align: center;
+}
+
+.h2{
+  padding-bottom:2rem;
+}
+
+ul{
+  padding-bottom:2.5rem;
 }

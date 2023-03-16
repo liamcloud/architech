@@ -16,6 +16,8 @@ import downloadPhoto from "../utils/downloadPhoto";
 import DropDown from "../components/DropDown";
 import { roomType, rooms, themeType, themes } from "../utils/dropdownTypes";
 import { GenerateResponseData } from "./api/generate";
+import CountUp from "react-countup";
+import Modal from "../components/modal"
 
 // Configuration for the uploader
 const uploader = Uploader({
@@ -29,7 +31,7 @@ const options = {
   editor: { images: { crop: false } },
   styles: {
     colors: {
-      primary: "#2563EB", // Primary buttons & links
+      primary: "#e6007a", // Primary buttons & links
       error: "#d23f4d", // Error messages
       shade100: "#fff", // Standard text
       shade200: "#fffe", // Secondary button text
@@ -102,21 +104,17 @@ const Home: NextPage = () => {
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
-        <title>RoomGPT</title>
+        <title>Architech</title>
       </Head>
       <Header />
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
-        <a
-          href="https://dub.sh/hassan-newsletter"
-          target="_blank"
-          rel="noreferrer"
-          className="border border-gray-700 rounded-2xl py-2 px-4 text-gray-400 text-sm my-6 duration-300 ease-in-out hover:text-gray-300 transition"
+      <p
+          className="border border-gray-700 rounded-lg py-2 px-4 text-gray-400 text-sm mb-5 transition duration-300 ease-in-out hover:text-gray-300"
         >
-          <span className="font-semibold">Subscribe to my newsletter</span> to
-          learn how I built roomGPT
-        </a>
-        <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-blue-600">dream</span> room
+          Already{" "}<span className="span"><CountUp start={20000} end={24902} duration={2} separator="," /></span> rooms generated, and counting!
+        </p>
+        <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-white-100 sm:text-6xl mb-5">
+          Generate your <span className="pinkText">dream</span> room
         </h1>
         <p className="text-gray-400">
           <span className="font-bold text-gray-300">Note:</span> We're

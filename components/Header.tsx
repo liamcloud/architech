@@ -1,30 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import Modal from "../components/modal"
 
 export default function Header() {
+  const [modalOpen, setModalOpen] = useState(false);
   return (
     <header className="flex flex-col xs:flex-row justify-between items-center w-full mt-3">
       <Link href="/" className="flex space-x-2">
-        <Image
-          alt="header text"
-          src="/bed.svg"
-          className="sm:w-10 sm:h-10 w-9 h-9"
-          width={24}
-          height={24}
-        />
-        <h1 className="sm:text-3xl text-xl font-bold ml-2 tracking-tight">
-          Architech
-        </h1>
+      <Image
+                  alt="Original photo of a room with roomGPT.io"
+                  src="/logo.png"
+                  className="logo"
+                  width={100}
+                  height={100}
+                />
       </Link>
-      <a
-        className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-blue-600 text-white px-5 py-2 text-sm shadow-md hover:bg-blue-500 bg-blue-600 font-medium transition"
-        href="https://github.com/Nutlope/roomGPT"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Github />
-        <p>Star on GitHub</p>
-      </a>
+      <Modal open={modalOpen} onClose={() => setModalOpen(false)}/>
+        <button 
+        className="flex max-w-fit items-center justify-center space-x-2 rounded-full text-white px-5 py-2 text-sm shadow-md bg-#e6007a font-medium transition myClass"
+        onClick={() => setModalOpen(true)}>Architech Pro
+        </button>
     </header>
   );
 }
