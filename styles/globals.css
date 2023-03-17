@@ -139,3 +139,15 @@ h1{
 ul{
   padding-bottom:2.5rem;
 }
+
+@media (max-width: 1350px) {
+  .element{
+    width:90%;
+  }
+}
+
+@media (max-width: 1030px) {
+  .pay{
+    flex-direction: column;
+  }
+}

@@ -70,7 +70,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-      <Testimonials />
       <Footer />
     </div>
   );
