@@ -74,7 +74,7 @@ const Modal = ({ open, onClose }: ModalProps) => {
               </li>
               <li className="test flex">
                 <AiOutlineCheckCircle className="gello" />
-                Newest AI models w/ CLIP-guidance for less artefacts
+                Newest AI models
               </li>
               <li className="test flex">
                 <AiOutlineCheckCircle className="gello" />
@@ -134,7 +134,7 @@ const Modal = ({ open, onClose }: ModalProps) => {
               </li>
               <li className="test flex">
                 <AiOutlineCheckCircle className="gello" />
-                Newest AI models w/ CLIP-guidance for less artefacts
+                Newest AI models
               </li>
               <li className="test flex">
                 <AiOutlineCheckCircle className="gello" />
