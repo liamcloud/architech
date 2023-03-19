@@ -116,13 +116,9 @@ const Home: NextPage = () => {
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-white-100 sm:text-6xl mb-5">
           Generate your <span className="pinkText">dream</span> room
         </h1>
-        <p className="text-gray-400">
-          <span className="font-bold text-gray-300">Note:</span> We're
-          temporarily{" "}
-          <span className="font-bold text-gray-300">
-            limiting generations to 3 per day
-          </span>{" "}
-          because of high traffic.
+        <p className="text-gray-400 max-w-2xl">
+          <span className="font-bold text-gray-300">Note:</span>{" "}
+          Take a photo of your current room. For best results make sure it shows the entire room in a 90° straight angle facing a wall or window horizontally (click for example).
         </p>
         <ResizablePanel>
           <AnimatePresence mode="wait">

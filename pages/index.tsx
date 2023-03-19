@@ -5,11 +5,11 @@ import Link from "next/link";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SquigglyLines from "../components/SquigglyLines";
-import { Testimonials } from "../components/Testimonials";
 import { GiWideArrowDunk } from 'react-icons/gi';
 import CountUp from "react-countup";
 import Modal from "../components/modal"
 import { useState } from "react";
+import Auth from "../components/auth";
 
 const Home: NextPage = () => {
   return (
@@ -70,6 +70,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
+      <Auth />
       <Footer />
     </div>
   );
