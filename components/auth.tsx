@@ -1,20 +1,24 @@
 import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "../firebase/clientApp";
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 const myAuth = () => {
   async function signInWithGoogle() {
     const userCredentials = await firebase
       .auth()
       .signInWithPopup(new firebase.auth.GoogleAuthProvider());
-    firebase.firestore().collection("users").doc(userCredentials.user.uid).set({
-      uid: userCredentials.user.uid,
-      email: userCredentials.user.email,
-      name: userCredentials.user.displayName,
-      provider: userCredentials.user.providerData[0].providerId,
-      photoUrl: userCredentials.user.photoURL,
+
+    const { user } = userCredentials;
+
+    firebase.firestore().collection("users").doc(user?.uid).set({
+      uid: user?.uid,
+      email: user?.email,
+      name: user?.displayName,
+      provider: user?.providerData[0]?.providerId,
+      photoUrl: user?.photoURL,
     });
   }
+
   return (
     <div>
       <h1>hello</h1>
