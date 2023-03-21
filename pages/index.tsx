@@ -10,8 +10,19 @@ import CountUp from "react-countup";
 import Modal from "../components/modal"
 import { useState } from "react";
 import Auth from "../components/auth";
+import firebase from "../firebase/clientApp"
+import { createCheckoutSession } from "../stripe/createCheckoutSession";
+import { useAuthState } from "react-firebase-hooks/auth"
+import { useCollection } from "react-firebase-hooks/firestore"
+import usePremiumStatus from "../stripe/usePremiumStatus";
+
 
 const Home: NextPage = () => {
+
+  const [user, userLoading] = useAuthState((firebase as any).auth())
+  console.log("Loading:", userLoading, "|", "Current user:", user)
+  const userIsPremium = usePremiumStatus(user as any)
+
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
       <Head>
@@ -70,7 +81,20 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-      <Auth />
+      <div>
+        {!user && userLoading && <h1>Loading...</h1>}
+        {!user && !userLoading && <Auth />}
+        {user && !userLoading && (
+        <div>
+          <h2>Welcome to Architech pro, {user.displayName}</h2>
+          {!userIsPremium ? (
+            <button onClick={() => createCheckoutSession(user.uid)}>Upgrade</button>
+          ): (
+            <h2>helferlo</h2>
+          )}
+        </div>
+        )}
+      </div>
       <Footer />
     </div>
   );
