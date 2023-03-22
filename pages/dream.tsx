@@ -18,6 +18,11 @@ import { roomType, rooms, themeType, themes } from "../utils/dropdownTypes";
 import { GenerateResponseData } from "./api/generate";
 import CountUp from "react-countup";
 import Modal from "../components/modal"
+import Auth from "../components/auth"
+import usePremiumStatus from "../stripe/usePremiumStatus";
+import { useAuthState } from "react-firebase-hooks/auth"
+import firebase from "../firebase/clientApp"
+import { createCheckoutSession } from "../stripe/createCheckoutSession";
 
 // Configuration for the uploader
 const uploader = Uploader({
@@ -100,6 +105,8 @@ const Home: NextPage = () => {
       setLoading(false);
     }, 1300);
   }
+  const [user, userLoading] = useAuthState((firebase as any).auth())
+  const userIsPremium = usePremiumStatus(user as any)
 
   return (
     <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
@@ -107,6 +114,11 @@ const Home: NextPage = () => {
         <title>Architech</title>
       </Head>
       <Header />
+      {!user && userLoading && <h1>Loading...</h1>}
+      {!user && !userLoading && <Auth />}
+      {user && !userLoading && (
+
+        
       <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
       <p
           className="border border-gray-700 rounded-lg py-2 px-4 text-gray-400 text-sm mb-5 transition duration-300 ease-in-out hover:text-gray-300"
@@ -292,7 +304,7 @@ const Home: NextPage = () => {
             </motion.div>
           </AnimatePresence>
         </ResizablePanel>
-      </main>
+      </main>)}
       <Footer />
     </div>
   );

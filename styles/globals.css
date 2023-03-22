@@ -151,3 +151,24 @@ ul{
     display: grid;
   }
 }
+
+.signIn{
+  text-align: center;
+  margin-left:1rem;
+  margin-right:1rem;
+}
+
+.sGoogle{
+  align-items: center;
+  border: 1px solid white;
+  padding:1rem 2rem;
+  cursor: pointer;
+  max-width: 40%;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom:2rem;
+}
+
+.googleIcon{
+  font-size: 2rem;
+}

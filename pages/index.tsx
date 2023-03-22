@@ -20,7 +20,6 @@ import usePremiumStatus from "../stripe/usePremiumStatus";
 const Home: NextPage = () => {
 
   const [user, userLoading] = useAuthState((firebase as any).auth())
-  console.log("Loading:", userLoading, "|", "Current user:", user)
   const userIsPremium = usePremiumStatus(user as any)
 
   return (
