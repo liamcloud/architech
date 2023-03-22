@@ -126,7 +126,7 @@ const Home: NextPage = () => {
           Already{" "}<span className="span"><CountUp start={20000} end={24902} duration={2} separator="," /></span> rooms generated, and counting!
         </p>
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-white-100 sm:text-6xl mb-5">
-          Generate your <span className="pinkText">dream</span> room
+          Welcome, <span className="pinkText">{user.displayName}</span> !
         </h1>
         <p className="text-gray-400 max-w-2xl">
           <span className="font-bold text-gray-300">Note:</span>{" "}
