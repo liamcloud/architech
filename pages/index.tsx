@@ -80,20 +80,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </main>
-      <div>
-        {!user && userLoading && <h1>Loading...</h1>}
-        {!user && !userLoading && <Auth />}
-        {user && !userLoading && (
-        <div>
-          <h2>Welcome to Architech pro, {user.displayName}</h2>
-          {!userIsPremium ? (
-            <button >Upgrade</button>
-          ): (
-            <h2>helferlo</h2>
-          )}
-        </div>
-        )}
-      </div>
       <Footer />
     </div>
   );
