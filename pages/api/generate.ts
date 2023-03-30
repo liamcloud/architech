@@ -67,7 +67,7 @@ const ratelimit = redis
             : `a ${theme.toLowerCase()} ${room.toLowerCase()}, beautiful, UHD, 4K, clear sky`,
         a_prompt:
           "best quality, extremely detailed, photo from Pinterest, interior, cinematic photo, ultra-detailed, ultra-realistic, award-winning",
-          image_resolution: 768,
+          image_resolution: "768",
         n_prompt:
           "longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality",
       },
