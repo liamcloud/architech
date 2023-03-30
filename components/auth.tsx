@@ -20,6 +20,7 @@ const myAuth = () => {
       name: user?.displayName,
       provider: user?.providerData[0]?.providerId,
       photoUrl: user?.photoURL,
+      freeRenders: 5,
     });
   }
 
@@ -36,6 +37,7 @@ const myAuth = () => {
         name: user?.displayName,
         provider: user?.providerData[0]?.providerId,
         photoUrl: user?.photoURL,
+        freeRenders: 5,
       });
     }
 
@@ -51,6 +53,7 @@ const myAuth = () => {
           name: user?.displayName,
           provider: user?.providerData[0]?.providerId,
           photoUrl: user?.photoURL,
+          freeRenders: 5,
         });
       }
     

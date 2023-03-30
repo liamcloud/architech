@@ -26,10 +26,11 @@ const ratelimit = redis
     })
   : undefined;
 
-export default async function handler(
-  req: ExtendedNextApiRequest,
-  res: NextApiResponse<GenerateResponseData | string>
-) {
+  export default async function handler(
+    req: ExtendedNextApiRequest,
+    res: NextApiResponse<GenerateResponseData | string>,
+    uid: string
+  ) {
   // Rate Limiter Code
   if (ratelimit) {
     const identifier = requestIp.getClientIp(req);
@@ -63,9 +64,10 @@ export default async function handler(
         prompt:
           room === "Gaming Room"
             ? "a room for gaming with gaming computers, gaming consoles, and gaming chairs"
-            : `a ${theme.toLowerCase()} ${room.toLowerCase()}`,
+            : `a ${theme.toLowerCase()} ${room.toLowerCase()}, beautiful, UHD, 4K, clear sky`,
         a_prompt:
           "best quality, extremely detailed, photo from Pinterest, interior, cinematic photo, ultra-detailed, ultra-realistic, award-winning",
+          image_resolution: 768,
         n_prompt:
           "longbody, lowres, bad anatomy, bad hands, missing fingers, extra digit, fewer digits, cropped, worst quality, low quality",
       },

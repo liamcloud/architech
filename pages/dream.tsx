@@ -128,13 +128,14 @@ const Home: NextPage = () => {
         <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-white-100 sm:text-6xl mb-5">
           Welcome, <span className="pinkText">{user.displayName}</span> !
         </h1>
+        <h3>You have <span>5</span> free renders left</h3><br></br>
         <p className="text-gray-400 max-w-2xl">
           <span className="font-bold text-gray-300">Note:</span>{" "}
           Take a photo of your current room. For best results make sure it shows the entire room in a 90° straight angle facing a wall or window horizontally (click for example).
         </p>
         <ResizablePanel>
           <AnimatePresence mode="wait">
-            <motion.div className="flex justify-between items-center w-full flex-col mt-4">
+            <motion.div className="flex justify-between flex-col items-center w-full mt-4">
               {!restoredImage && (
                 <>
                   <div className="space-y-4 w-full max-w-sm">
